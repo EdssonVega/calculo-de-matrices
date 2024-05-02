@@ -37,6 +37,24 @@
     border-bottom: 2px solid blue;
 }
 
+.matriz2x2Resultado{
+    width: 150px;
+    border: 1px solid red;
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap: 10px;
+    row-gap: 30px;
+}
+
+.matriz2x2Resultado h1{
+    color: rgb(94, 36, 94);
+    font-size: 1.25rem;
+    justify-self: center;
+    align-self: flex-end;
+   
+}
+
+
 .addMatriz{
     background-color: black;
     color: white;
