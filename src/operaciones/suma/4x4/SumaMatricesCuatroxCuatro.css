@@ -7,22 +7,22 @@
 
 .contenedorDeMatrices{
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     gap: 25px;
     width: 100%;
 }
 
-.matriz2x2{
-    width: 150px;
+.matriz4x4{
+    width: 350px;
     height: 100%;
     display: grid;
-    grid-template-columns:repeat(2, 1fr);
+    grid-template-columns:repeat(4, 1fr);
     gap: 10px;
     row-gap: 30px;
 }
 
-.matriz2x2 input{
+.matriz4x4 input{
     color: rgb(94, 36, 94);
     font-size: 1.25rem;
     justify-self: center;
@@ -35,15 +35,15 @@
     border-bottom: 2px solid blue;
 }
 
-.matriz2x2Resultado{
+.matriz4x4Resultado{
     width: 150px;
     display: grid;
-    grid-template-columns:repeat(2, 1fr);
+    grid-template-columns:repeat(4, 1fr);
     gap: 10px;
     row-gap: 30px;
 }
 
-.matriz2x2Resultado h1{
+.matriz4x4Resultado h1{
     color: rgb(94, 36, 94);
     font-size: 1.25rem;
     justify-self: center;
