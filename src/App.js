@@ -82,6 +82,7 @@ function App() {
 
   return (
     <div className="App">
+      <h1 className='tittle'>Operaciones Matriciales</h1>
       <div className={animation?"menuContainerAnimation":"menuContainer"}>
         <h1>Menu</h1>
         <div className='sumaButton' onClick={sumita}>
