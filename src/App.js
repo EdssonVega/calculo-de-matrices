@@ -7,7 +7,9 @@ import SumaMatrices4x4 from './operaciones/suma/4x4/SumaMatricesCuatroxCuatro';
 import RestaMatrices2x2 from './operaciones/resta/2x2/RestaMatricesDosxDos';
 import RestaMatrices3x3 from './operaciones/resta/3x3/RestaMatricesTresxTres';
 import RestaMatrices4x4 from './operaciones/resta/4x4/RestaMatricesCuatroxCuatro';
-
+import MultiplicacionMatrices2x2 from './operaciones/multiplicacion/2x2/MultiplicacionMatricesDosxDos';
+import MultiplicacionMatrices3x3 from './operaciones/multiplicacion/3x3/MultiplicacionMatricesTresxTres';
+import MultiplicacionMatrices4x4 from './operaciones/multiplicacion/4x4/MultiplicacionMatricesCuatroxCuatro';
 
 function App() {
   const[operaciones,setOperaciones]=useState("nada");
@@ -63,6 +65,21 @@ function App() {
     setChooseOption(6)
   }
 
+  const start2x2Multiplicacion= () => {
+    setAnimation(!animation)
+    setChooseOption(7)
+  }
+
+  const start3x3Multiplicacion= () => {
+    setAnimation(!animation)
+    setChooseOption(8)
+  }
+
+  const start4x4Multiplicacion= () => {
+    setAnimation(!animation)
+    setChooseOption(9)
+  }
+
   return (
     <div className="App">
       <div className={animation?"menuContainerAnimation":"menuContainer"}>
@@ -94,9 +111,9 @@ function App() {
             <h2>MULTIPLICACION</h2>)}
           {operaciones==="multi" &&(
             <div className='sumaDosTres'> 
-              <button>(2x2)</button>
-              <button>(3x3)</button>
-              <button>(4x4)</button>
+              <button onClick={start2x2Multiplicacion}>(2x2)</button>
+              <button onClick={start3x3Multiplicacion}>(3x3)</button>
+              <button onClick={start4x4Multiplicacion}>(4x4)</button>
             </div>
           )}
         </div>
@@ -109,7 +126,9 @@ function App() {
           {chooseOption===4 &&(<RestaMatrices2x2 />)}
           {chooseOption===5 &&(<RestaMatrices3x3 />)}
           {chooseOption===6 &&(<RestaMatrices4x4 />)}
-
+          {chooseOption===7 &&(<MultiplicacionMatrices2x2 />)}
+          {chooseOption===8 &&(<MultiplicacionMatrices3x3 />)}
+          {chooseOption===9 &&(<MultiplicacionMatrices4x4 />)}
 
 
           <button className='returnButton' onClick={returnButton}>Regresar</button>
