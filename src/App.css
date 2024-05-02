@@ -59,7 +59,8 @@
 
 }
 
-.sumaDosTres{
+.sumaDosTres,
+.restaDosTres{
   height: 100%;
   display: flex;
   gap: 15px;
@@ -83,10 +84,23 @@
 }
 
 .calculusContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
   min-width: 35%;
   background-color: white;
   border-radius: 25px;
   padding: 20px;
+}
+
+.returnButton{
+    background-color: blue;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    border:none;
+    cursor: pointer;
+    align-self: center;
 }
 
 /*

@@ -1,0 +1,71 @@
+.mainContainerMatrices{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.contenedorDeMatrices{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    width: 100%;
+}
+
+.matriz3x3{
+    width: 250px;
+    height: 100%;
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap: 10px;
+    row-gap: 30px;
+}
+
+.matriz3x3 input{
+    color: rgb(94, 36, 94);
+    font-size: 1.25rem;
+    justify-self: center;
+    align-self: flex-end;
+    padding-left: 15%;
+    outline: none;
+    width: 80%;
+    height: 100%;
+    border: none;
+    border-bottom: 2px solid blue;
+}
+
+.matriz3x3Resultado{
+    width: 150px;
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap: 10px;
+    row-gap: 30px;
+}
+
+.matriz3x3Resultado h1{
+    color: rgb(94, 36, 94);
+    font-size: 1.25rem;
+    justify-self: center;
+    align-self: flex-end;
+}
+
+
+.addMatriz{
+    background-color: black;
+    color: white;
+    text-transform: capitalize;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.calculateButton{
+    background-color: black;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    border:none;
+    cursor: pointer;
+}

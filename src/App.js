@@ -4,6 +4,9 @@ import { useState } from 'react';
 import SumaMatrices2x2 from "./operaciones/suma/2x2/SumaMatricesDosxDos"
 import SumaMatrices3x3 from './operaciones/suma/3x3/SumaMatricesTresxTres';
 import SumaMatrices4x4 from './operaciones/suma/4x4/SumaMatricesCuatroxCuatro';
+import RestaMatrices2x2 from './operaciones/resta/2x2/RestaMatricesDosxDos';
+import RestaMatrices3x3 from './operaciones/resta/3x3/RestaMatricesTresxTres';
+import RestaMatrices4x4 from './operaciones/resta/4x4/RestaMatricesCuatroxCuatro';
 
 
 function App() {
@@ -25,6 +28,11 @@ function App() {
     setOperaciones("multi")
   }
 
+  const returnButton =()=>{
+    setChooseOption(0)
+    setAnimation(!animation)
+  }
+
   const start2x2Sum = () => {
     setAnimation(!animation)
     setChooseOption(1)
@@ -38,6 +46,21 @@ function App() {
   const start4x4Sum = () => {
     setAnimation(!animation)
     setChooseOption(3)
+  }
+
+  const start2x2Resta= () => {
+    setAnimation(!animation)
+    setChooseOption(4)
+  }
+
+  const start3x3Resta= () => {
+    setAnimation(!animation)
+    setChooseOption(5)
+  }
+
+  const start4x4Resta= () => {
+    setAnimation(!animation)
+    setChooseOption(6)
   }
 
   return (
@@ -60,9 +83,9 @@ function App() {
           <h2>RESTA</h2>)}
           {operaciones==="restita" &&(
             <div className='restaDosTres'>
-              <button>(2x2)</button>
-              <button>(3x3)</button>
-              <button>(4x4)</button>
+              <button onClick={start2x2Resta}>(2x2)</button>
+              <button onClick={start3x3Resta}>(3x3)</button>
+              <button onClick={start4x4Resta}>(4x4)</button>
             </div>
           )}
         </div>
@@ -83,6 +106,13 @@ function App() {
           {chooseOption===1 &&(<SumaMatrices2x2 />)}
           {chooseOption===2 &&(<SumaMatrices3x3 />)}
           {chooseOption===3 &&(<SumaMatrices4x4 />)}
+          {chooseOption===4 &&(<RestaMatrices2x2 />)}
+          {chooseOption===5 &&(<RestaMatrices3x3 />)}
+          {chooseOption===6 &&(<RestaMatrices4x4 />)}
+
+
+
+          <button className='returnButton' onClick={returnButton}>Regresar</button>
         </div>
       )}
     </div>
